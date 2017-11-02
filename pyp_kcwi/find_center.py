@@ -1,3 +1,18 @@
+# This function is used to subtract sky median
+#
+# INPUT:     - sky_file
+#            - img_file
+#            - mask_limit    mask limit
+#            - cut_ch        cut channel number
+#
+# INPUT EXAMPLE:
+# 
+#   img= fits.getdata("kb171021_00092_icuber.fits", header=True)
+#   centers= find_center(img)
+#
+# MODIFICATION HISTORY:
+#   2017-11-01 Initial version (ZC)
+
 def find_center(image): 
     '''
     Find the center of QSOs for each target,
