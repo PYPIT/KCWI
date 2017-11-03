@@ -33,7 +33,7 @@ def median(sky_file, img_file, mask_limit, cut_ch=300):
     # define final mask image
     mask_sum = np.zeros(sky[1,:,:].shape)
 
-    ## sky[w,x,y]; for every wavelength: len(sky[:,1,1])
+    ## looping over the layers
     for j in np.arange(0, len(sky[:,1,1]), 1):
         # iterated 10 times, rejecting points by > 3 sigma
         filtered_data = sigma_clip(sky[j,:,:], sigma=3, iters=10)
