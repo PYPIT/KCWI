@@ -1,9 +1,8 @@
-# This function is used to subtract sky median
+# This function is used to determine the center of the QSO for each datacube 
 #
-# INPUT:     - sky_file
+# INPUT:     
 #            - img_file
-#            - mask_limit    mask limit
-#            - cut_ch        cut channel number
+#           
 #
 # INPUT EXAMPLE:
 # 
