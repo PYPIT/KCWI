@@ -19,7 +19,15 @@ def find_center(image):
     and later, we will use the center to
     calculate the offset.  (Z. Cai)
 
-    input: datacube 
+    This function is used to determine the center of the QSO for each datacube     
+
+    INPUT EXAMPLE:
+ 
+    img= fits.getdata("kb171021_00092_icuber.fits", header=True)
+    centers= find_center(img)
+
+    MODIFICATION HISTORY:
+    2017-11-01 Initial version (ZC)
     '''
     # construct a 2D broadband image using median stacking along the wavelength
     sci_med=np.median(image, axis=0)
