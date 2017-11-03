@@ -50,6 +50,4 @@ def find_center(image):
     return center   
 
 
-img1, ih1 = fits.getdata("kb171021_00077_icuber.fits", header=True)
-center1=find_center(img1)
 
