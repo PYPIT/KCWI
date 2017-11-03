@@ -1,16 +1,3 @@
-# This function is used to determine the center of the QSO for each datacube 
-#
-# INPUT:     
-#            - img_file
-#           
-#
-# INPUT EXAMPLE:
-# 
-#   img= fits.getdata("kb171021_00092_icuber.fits", header=True)
-#   centers= find_center(img)
-#
-# MODIFICATION HISTORY:
-#   2017-11-01 Initial version (ZC)
 
 def find_center(image): 
     '''
