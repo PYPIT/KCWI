@@ -33,11 +33,13 @@ Then One can see new center for img2 is the same as that of img1. Ready for comb
  MODIFICATION HISTORY:
    2017-11-02 Initial version (ZC)
 '''  
-    image_sh= image  # construct a new datacube called image_sh (image_shift)
+    ###image_sh= image  # construct a new datacube called image_sh (image_shift)
+    image_sh= np.copy(image)  # construct a new datacube called image_sh (image_shift)
     for i in np.arange(0, len(image[:,1,1]), 1):  # loop layers 
         # offset each layer using shift_x, shift_y 
         image_sh[i,:,:]= np.roll(image[i,:,:], -int(round(shift_x)), axis=0)
-        image_sh[i,:,:]= np.roll(image[i,:,:], -int(round(shift_y)), axis=1)
+        ###image_sh[i,:,:]= np.roll(image[i,:,:], -int(round(shift_y)), axis=1)
+        image_sh[i,:,:]= np.roll(image_sh[i,:,:], -int(round(shift_y)), axis=1)
 
     return image_sh
  
